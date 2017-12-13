@@ -13,6 +13,7 @@ After=network.target
 
 [Service]
 ExecStart=/usr/bin/litecoind -daemon -conf=/etc/litecoin.conf -datadir=/var/lib/litecoin -pid=/run/litecoind/litecoind.pid
+ExecStop=/usr/bin/litecoin-cli stop
 # Creates /run/litecoind owned by litecoin
 RuntimeDirectory=litecoind
 User=litecoin

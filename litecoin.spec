@@ -14,7 +14,7 @@
 
 Name:    litecoin
 Version: 0.14.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Peer to Peer Cryptographic Currency
 Group:   Applications/System
 License: MIT
@@ -232,5 +232,8 @@ rm -rf %{buildroot}
 %exclude %{_datadir}/litecoin/*.pyo
 
 %changelog
+* Wed Dec 13 2017 Evan Klitzke <evan@eklitzke.org> - 0.14.2-2
+- Configure litecoind.service to use litecoin-cli stop to stop litecoind
+
 * Sun Dec 3 2017 Evan Klitzke <evan@eklitzke.org>
 - Import from github.com/eklitzke/bitcoin-copr
